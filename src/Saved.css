@@ -1,0 +1,123 @@
+.saved-page-container {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #FEB624, #FFDE59 10%, #FFEF99 20%, #FFFFCC 25%, #FFFFFF 60%, #FFFFFF 70%, #FFFFF0 80%, #FFE97D 90%, #FEB624);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  h2 {
+    font-size: 60px;
+    background: -webkit-linear-gradient(-45deg, #e18412, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .saved-link-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .link-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .link-and-qr {
+    display: flex;
+    align-items: center;
+  }
+  
+  .saved-link {
+    color: #4e4e4e;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+  
+  .download-button {
+    display: inline-block;
+    background-color: #FEB624;
+    color: #4E4E4E;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+  }
+  
+  .delete-button {
+    display: inline-block;
+    background-color: rgb(240, 118, 12);
+    color: #4E4E4E;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  
+  .qr-container {
+    margin-top: 10px;
+    margin-left: 45%;
+  }
+  
+  .qr-code {
+    
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .qr-code.enlarged {
+    transform: scale(2);
+  }
+  
+  .enlarged-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    overflow: hidden;
+  }
+  
+  .enlarged-qr {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .saved-link-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+  
+    .download-button,
+    .delete-button {
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  
